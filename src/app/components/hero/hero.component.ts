@@ -18,8 +18,8 @@ export class HeroComponent implements OnInit, OnDestroy {
   ];
 
   readonly socials = [
-    { icon: 'bi-linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/in/rajesh-gottimukkula' },
-    { icon: 'bi-github', label: 'GitHub', url: 'https://github.com/' },
+    { icon: 'bi-linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/in/rajeshgottimukkula' },
+    { icon: 'bi-github', label: 'GitHub', url: 'https://github.com/rajeshgotti' },
     { icon: 'bi-envelope', label: 'Email', url: 'mailto:rajeshgottimukkula1996@gmail.com' },
     { icon: 'bi-telephone', label: 'Phone', url: 'tel:+918185031050' }
   ];

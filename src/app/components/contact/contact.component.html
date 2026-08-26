@@ -100,13 +100,23 @@
           }
         </div>
 
-        <button type="submit" class="btn-app btn-app--primary">
-          Send Message <i class="bi bi-send"></i>
+        <button type="submit" class="btn-app btn-app--primary" [disabled]="sending">
+          @if (sending) {
+            Sending... <i class="bi bi-hourglass-split"></i>
+          } @else {
+            Send Message <i class="bi bi-send"></i>
+          }
         </button>
 
         @if (formSentSuccessfully) {
           <p class="contact__success">
-            <i class="bi bi-check-circle"></i> Thanks! Your message has been sent — I'll reply soon.
+            <i class="bi bi-check-circle"></i> Thanks! Your message has been sent — I&rsquo;ll reply soon.
+          </p>
+        }
+
+        @if (formSendError) {
+          <p class="contact__error contact__error--form">
+            <i class="bi bi-exclamation-circle"></i> Something went wrong sending your message. Please try again, or email me directly at rajeshgottimukkula1996&#64;gmail.com.
           </p>
         }
       </form>

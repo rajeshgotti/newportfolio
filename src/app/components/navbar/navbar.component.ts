@@ -19,6 +19,8 @@ export class NavbarComponent implements OnDestroy {
   isScrolled = false;
   activeFragment = 'home';
 
+  private scrollFrame: number | null = null;
+
   readonly links: NavLink[] = [
     { label: 'Home', fragment: 'home', icon: 'bi-house' },
     { label: 'About', fragment: 'about', icon: 'bi-person' },
@@ -33,8 +35,21 @@ export class NavbarComponent implements OnDestroy {
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
-    this.isScrolled = window.scrollY > 40;
-    this.updateActiveSection();
+    if (this.scrollFrame !== null) {
+      return;
+    }
+    this.scrollFrame = window.requestAnimationFrame(() => {
+      this.isScrolled = window.scrollY > 40;
+      this.updateActiveSection();
+      this.scrollFrame = null;
+    });
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (this.isMenuOpen) {
+      this.closeMenu();
+    }
   }
 
   toggleMenu(): void {
@@ -61,5 +76,8 @@ export class NavbarComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.document.body.classList.remove('menu-open');
+    if (this.scrollFrame !== null) {
+      window.cancelAnimationFrame(this.scrollFrame);
+    }
   }
 }
