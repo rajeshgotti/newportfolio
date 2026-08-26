@@ -33,10 +33,10 @@ export class ExperienceComponent {
     {
       type: 'education',
       title: 'Full Stack .NET Developer Training',
-      period: '8 Months',
+      period: '8 Months (2023)',
       place: 'Sathya Technologies — Ameerpet, Hyderabad',
       description:
-        'Comprehensive full-stack training covering C#, ASP.NET Core, SQL Server, Angular and Web API — including hands-on CRUD projects, Repository / Service pattern and EF Core.'
+        'Comprehensive FULL-STACK training covering C#, ASP.NET Core, SQL Server, Angular and Web API — including hands-on CRUD projects, Repository / Service pattern and EF Core.'
     }
   ];
 

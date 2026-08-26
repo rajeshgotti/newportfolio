@@ -87,7 +87,49 @@ export class PortfolioComponent {
         'Personal learning project — a Student Management application built with Angular + ASP.NET Core Web API + SQL Server. Implements full CRUD, Repository / Service pattern, stored procedures with EF Core and reactive-form driven UI. Built to strengthen my full-stack fundamentals.',
       technologies: ['Angular', 'ASP.NET Core Web API', 'C#', 'EF Core', 'SQL Server'],
       client: 'Personal Project (Learning)',
-      duration: 'Ongoing',
+      duration: 'COMPLETED',
+      role: 'Full Stack Developer (Self-taught)'
+    },
+    {
+      id: 7,
+      title: 'Mobile Management (Full Stack CRUD)',
+      category: 'Full Stack',
+      image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=900&q=80',
+      description:
+        'Personal learning project — a Mobile Management application built with Angular + ASP.NET Core Web API + SQL Server. Implements CRUD operations using the Repository / Service pattern, Entity Framework Core, SQL Server stored procedures, and a structured Web API architecture. Built to strengthen my practical understanding of full-stack application development and backend API integration.',
+      technologies: [
+        'Angular',
+        'ASP.NET Core Web API',
+        'C#',
+        'Entity Framework Core',
+        'SQL Server',
+        'Stored Procedures',
+        'Repository Pattern',
+        'Service Layer'
+      ],
+      client: 'Personal Project (Learning)',
+      duration: 'COMPLETED',
+      role: 'Full Stack Developer (Self-taught)'
+    },
+    {
+      id: 8,
+      title: 'Restaurant Management (Full Stack CRUD)',
+      category: 'Full Stack',
+      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80',
+      description:
+        'Personal learning project — a Restaurant Management application built with Angular + ASP.NET Core Web API + SQL Server. Designed to manage restaurant menu items, customer orders, and related data through CRUD operations. Implements a layered architecture using Repository / Service patterns, Entity Framework Core, SQL Server, and RESTful Web APIs. Built to strengthen my practical full-stack development and API integration skills.',
+      technologies: [
+        'Angular',
+        'ASP.NET Core Web API',
+        'C#',
+        'Entity Framework Core',
+        'SQL Server',
+        'Repository Pattern',
+        'Service Layer',
+        'REST API'
+      ],
+      client: 'Personal Project (Learning)',
+      duration: 'COMPLETED',
       role: 'Full Stack Developer (Self-taught)'
     }
   ];

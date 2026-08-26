@@ -15,23 +15,23 @@ export class SkillsComponent implements AfterViewInit, OnDestroy {
   @ViewChild('skillsSection') skillsSection?: ElementRef<HTMLElement>;
 
   readonly skills: Skill[] = [
-    { name: 'Angular (v14 – v17)', level: 88, icon: 'bi-hexagon' },
-    { name: 'TypeScript', level: 85, icon: 'bi-code-slash' },
-    { name: 'JavaScript (ES6+)', level: 85, icon: 'bi-filetype-js' },
-    { name: 'HTML5 & CSS3 / SCSS', level: 88, icon: 'bi-brush' },
-    { name: 'Reactive Forms & RxJS', level: 82, icon: 'bi-diagram-3' },
-    { name: 'REST API Integration', level: 85, icon: 'bi-hdd-network' },
-    { name: 'Bootstrap & Angular Material', level: 80, icon: 'bi-palette' },
-    { name: 'Git & GitHub', level: 78, icon: 'bi-git' },
-    { name: 'C# / ASP.NET Core (Learning)', level: 55, icon: 'bi-braces' },
-    { name: 'SQL Server & EF Core (Learning)', level: 55, icon: 'bi-database' }
+    { name: 'Angular (v18)', level: 71, icon: 'bi-hexagon' },
+    { name: 'TypeScript', level: 68, icon: 'bi-code-slash' },
+    // { name: 'JavaScript (ES6+)', level: 60, icon: 'bi-filetype-js' },
+    { name: 'HTML5 & CSS3 / SCSS', level: 80, icon: 'bi-brush' },
+    { name: 'Reactive Forms', level: 82, icon: 'bi-diagram-3' },
+    { name: 'Bootstrap & Angular Material', level: 70, icon: 'bi-palette' },
+    { name: 'Git & GitHub', level: 60, icon: 'bi-git' },
+    { name: 'C# / ASP.NET Core (Learning)', level: 42, icon: 'bi-braces' },
+    { name: 'REST API Integration', level: 30, icon: 'bi-hdd-network' },
+    { name: 'SQL Server & EF Core (Learning)', level: 40, icon: 'bi-database' }
   ];
 
   readonly stats: StatItem[] = [
     { icon: 'bi-calendar3', value: 2, suffix: '+', label: 'Years Experience' },
     { icon: 'bi-hospital', value: 10, suffix: '+', label: 'EMR Modules Shipped' },
-    { icon: 'bi-code-square', value: 40, suffix: '+', label: 'Reusable Components' },
-    { icon: 'bi-cloud-check', value: 100, suffix: '+', label: 'REST APIs Integrated' }
+    { icon: 'bi-code-square', value: 30, suffix: '+', label: 'Reusable Components' },
+    { icon: 'bi-cloud-check', value: 20, suffix: '+', label: 'REST APIs Integrated' }
   ];
 
   animatedValues: number[] = this.stats.map(() => 0);

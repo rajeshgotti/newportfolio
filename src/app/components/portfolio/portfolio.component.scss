@@ -92,13 +92,17 @@
 }
 
 .project-card__category {
+  display: inline-block;
+  align-self: flex-start;
   font-family: var(--font-heading);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--primary-color);
-  margin-bottom: 6px;
+  background-color: #ffffff;
+  padding: 6px 12px;
+  margin-bottom: 10px;
 }
 
 .project-card__title {
@@ -237,6 +241,7 @@
 
 .project-modal__category {
   display: inline-block;
+  align-self: flex-start;
   width: fit-content;
   font-family: var(--font-heading);
   font-size: 11px;
@@ -244,7 +249,9 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--primary-color);
-  margin-bottom: 10px;
+  background-color: #ffffff;
+  padding: 6px 12px;
+  margin-bottom: 14px;
 }
 
 .project-modal__meta {
