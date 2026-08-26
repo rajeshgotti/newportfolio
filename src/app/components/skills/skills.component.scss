@@ -1,0 +1,107 @@
+.skills__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 96px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+}
+
+.stat-card {
+  text-align: center;
+  padding: 36px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--background-color);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(var(--primary-color-rgb), 0.4);
+  }
+
+  i {
+    font-size: 26px;
+    color: var(--primary-color);
+    margin-bottom: 14px;
+    display: inline-block;
+  }
+
+  h3 {
+    font-size: 40px;
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--muted-color);
+    margin: 0;
+  }
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 48px;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill-bar {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 14px;
+
+    i {
+      color: var(--primary-color);
+    }
+  }
+
+  &__value {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    color: var(--muted-color);
+  }
+
+  &__track {
+    height: 8px;
+    border-radius: 100px;
+    background: var(--surface-color-alt);
+    overflow: hidden;
+  }
+
+  &__fill {
+    height: 100%;
+    border-radius: 100px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    width: 0;
+    transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: fill-grow 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@keyframes fill-grow {
+  from { width: 0; }
+}

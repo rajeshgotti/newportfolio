@@ -1,0 +1,25 @@
+<section id="services" class="section services">
+  <div class="container-app">
+    <div class="section-heading" appReveal>
+      <p class="section-kicker">What I Do</p>
+      <h2 class="section-title">Angular-Focused Services</h2>
+      <p class="section-desc">
+        The kind of front-end work I&rsquo;ve delivered day-to-day in a production
+        healthcare product &mdash; and the value I can bring to your team.
+      </p>
+    </div>
+
+    <div class="services__grid">
+      @for (service of services; track service.title; let i = $index) {
+        <div class="service-card" [appReveal]="'reveal-delay-' + ((i % 4) + 1)">
+          <span class="service-card__index">0{{ i + 1 }}</span>
+          <div class="service-card__icon">
+            <i class="bi" [ngClass]="service.icon"></i>
+          </div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

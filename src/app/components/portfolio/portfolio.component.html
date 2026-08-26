@@ -1,0 +1,81 @@
+<section id="work" class="section section--alt portfolio">
+  <div class="container-app">
+    <div class="section-heading" appReveal>
+      <p class="section-kicker">Selected Work</p>
+      <h2 class="section-title">My Portfolio</h2>
+      <p class="section-desc">
+        Real modules I&rsquo;ve shipped in a production U.S. healthcare / EMR application,
+        plus personal projects where I&rsquo;m growing into full-stack development.
+      </p>
+    </div>
+
+    <div class="portfolio__filters" appReveal>
+      @for (filter of filters; track filter) {
+        <button
+          type="button"
+          class="portfolio__filter"
+          [class.is-active]="activeFilter === filter"
+          (click)="setFilter(filter)"
+        >
+          {{ filter }}
+        </button>
+      }
+    </div>
+
+    <div class="portfolio__grid">
+      @for (project of filteredProjects; track project.id; let i = $index) {
+        <article class="project-card" [appReveal]="'reveal-delay-' + ((i % 4) + 1)">
+          <button type="button" class="project-card__trigger" (click)="openProject(project)">
+            <span class="project-card__image">
+              <img [src]="project.image" [alt]="project.title" loading="lazy" />
+            </span>
+            <span class="project-card__overlay">
+              <span class="project-card__category">{{ project.category }}</span>
+              <span class="project-card__title">{{ project.title }}</span>
+              <span class="project-card__view">
+                <i class="bi bi-arrow-up-right"></i> View Project
+              </span>
+            </span>
+          </button>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+@if (activeProject) {
+  <div class="project-modal" role="dialog" aria-modal="true" [attr.aria-label]="activeProject.title">
+    <button type="button" class="project-modal__backdrop" (click)="closeProject()" aria-label="Close project details"></button>
+    <div class="project-modal__panel">
+      <button type="button" class="project-modal__close" (click)="closeProject()" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <div class="project-modal__image">
+        <img [src]="activeProject.image" [alt]="activeProject.title" />
+      </div>
+
+      <div class="project-modal__body">
+        <span class="project-modal__category">{{ activeProject.category }}</span>
+        <h3>{{ activeProject.title }}</h3>
+        <p>{{ activeProject.description }}</p>
+
+        <ul class="project-modal__meta">
+          <li><span>Client</span>{{ activeProject.client }}</li>
+          <li><span>Duration</span>{{ activeProject.duration }}</li>
+          <li><span>Role</span>{{ activeProject.role }}</li>
+        </ul>
+
+        <div class="project-modal__tags">
+          @for (tech of activeProject.technologies; track tech) {
+            <span>{{ tech }}</span>
+          }
+        </div>
+
+        <a href="#contact" class="btn-app btn-app--primary" (click)="closeProject()">
+          Start a Similar Project <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+}

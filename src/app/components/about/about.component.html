@@ -1,0 +1,63 @@
+<section id="about" class="section about">
+  <div class="container-app">
+    <div class="about__grid">
+      <div class="about__media" appReveal>
+        <div class="about__frame">
+          <img
+            src="assets/images/rajesh.jpg"
+            alt="Portrait of Rajesh Gottimukkula, Angular Developer"
+            loading="lazy"
+          />
+          <span class="about__badge">
+            <strong>2+</strong>
+            years experience
+          </span>
+          <span class="about__frame-role">
+            <i class="bi bi-hexagon-fill"></i>
+            Angular Developer
+          </span>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <p class="section-kicker" appReveal>About Me</p>
+        <h2 class="section-title" appReveal="reveal-delay-1">
+          Angular Developer focused on real, production healthcare software
+        </h2>
+
+        <p class="about__lead" appReveal="reveal-delay-2">
+          I&rsquo;m Rajesh Gottimukkula, an Angular Developer with 2+ years of experience
+          building and maintaining a U.S.-based healthcare / EMR application at
+          Imperium Software. I work on modules used every day by physicians, nurses
+          and clinical staff &mdash; Patient Registration, CPOE, Medication Reconciliation,
+          Vitals, Nursing Station and Reports.
+        </p>
+
+        <p class="about__lead about__lead--muted" appReveal="reveal-delay-2">
+          My day-to-day is Angular 17, TypeScript, Reactive Forms, RxJS and REST API
+          integration. Alongside that I&rsquo;m actively learning ASP.NET Core Web API, EF Core
+          and SQL Server so I can grow into a full-stack developer.
+        </p>
+
+        <ul class="about__info" appReveal="reveal-delay-3">
+          @for (item of info; track item.label) {
+            <li>
+              <i class="bi" [ngClass]="item.icon"></i>
+              <span class="about__info-label">{{ item.label }}</span>
+              <span class="about__info-value">{{ item.value }}</span>
+            </li>
+          }
+        </ul>
+
+        <div class="about__actions" appReveal="reveal-delay-4">
+          <a href="#contact" class="btn-app btn-app--primary">
+            Hire Me <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <a href="#work" class="btn-app btn-app--outline">
+            View My Work
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,143 @@
+.footer {
+  background: var(--surface-color);
+  border-top: 1px solid var(--border-color);
+  padding-top: 90px;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 1fr;
+  gap: 48px;
+  padding-bottom: 70px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.footer__logo {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 18px;
+
+  span {
+    color: var(--primary-color);
+  }
+}
+
+.footer__brand p {
+  max-width: 320px;
+  font-size: 14.5px;
+  margin-bottom: 24px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 12px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+
+    &:hover {
+      background: var(--primary-color);
+      color: #16171d;
+      border-color: var(--primary-color);
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.footer__nav-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.footer__nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__nav a {
+  font-size: 14.5px;
+  color: var(--muted-color);
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+
+  &:hover {
+    color: var(--primary-color);
+    padding-left: 4px;
+  }
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  a {
+    font-size: 14.5px;
+    color: var(--muted-color);
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.footer__location {
+  font-size: 14.5px;
+  color: var(--muted-color);
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--border-color);
+  padding: 26px 0;
+}
+
+.footer__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  p {
+    margin: 0;
+    font-size: 13px;
+  }
+}
+
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--background-color);
+  color: var(--text-color);
+  transition: all var(--transition-fast);
+
+  &:hover {
+    background: var(--primary-color);
+    color: #16171d;
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+  }
+}

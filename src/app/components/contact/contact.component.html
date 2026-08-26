@@ -1,0 +1,115 @@
+<section id="contact" class="section contact">
+  <div class="container-app">
+    <div class="section-heading" appReveal>
+      <p class="section-kicker">Get In Touch</p>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-desc">
+        Looking for an Angular Developer or have an EMR / healthcare front-end
+        project? My inbox is always open — I&rsquo;ll get back to you soon.
+      </p>
+    </div>
+
+    <div class="contact__grid">
+      <div class="contact__info" appReveal>
+        <ul>
+          @for (item of contactInfo; track item.label) {
+            <li>
+              <span class="contact__info-icon"><i class="bi" [ngClass]="item.icon"></i></span>
+              <span>
+                <strong>{{ item.label }}</strong>
+                @if (item.href) {
+                  <a class="contact__info-value" [href]="item.href">{{ item.value }}</a>
+                } @else {
+                  <span class="contact__info-value">{{ item.value }}</span>
+                }
+              </span>
+            </li>
+          }
+        </ul>
+
+        <div class="contact__social">
+          <span>Find Me</span>
+          <ul>
+            @for (s of socials; track s.label) {
+              <li>
+                <a [href]="s.url" [attr.aria-label]="s.label" target="_blank" rel="noopener">
+                  <i class="bi" [ngClass]="s.icon"></i>
+                </a>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <form class="contact__form" appReveal="reveal-delay-1" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+        <div class="contact__form-row">
+          <div class="contact__field">
+            <label for="name">Your Name</label>
+            <input
+              id="name"
+              type="text"
+              formControlName="name"
+              placeholder="Jane Doe"
+              [class.is-invalid]="submitted && f['name'].invalid"
+            />
+            @if (submitted && f['name'].invalid) {
+              <span class="contact__error">Please enter your name.</span>
+            }
+          </div>
+
+          <div class="contact__field">
+            <label for="email">Your Email</label>
+            <input
+              id="email"
+              type="email"
+              formControlName="email"
+              placeholder="jane@email.com"
+              [class.is-invalid]="submitted && f['email'].invalid"
+            />
+            @if (submitted && f['email'].invalid) {
+              <span class="contact__error">Please enter a valid email.</span>
+            }
+          </div>
+        </div>
+
+        <div class="contact__field">
+          <label for="subject">Subject</label>
+          <input
+            id="subject"
+            type="text"
+            formControlName="subject"
+            placeholder="Project inquiry"
+            [class.is-invalid]="submitted && f['subject'].invalid"
+          />
+          @if (submitted && f['subject'].invalid) {
+            <span class="contact__error">Please add a subject.</span>
+          }
+        </div>
+
+        <div class="contact__field">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            rows="5"
+            formControlName="message"
+            placeholder="Tell me a little about your project..."
+            [class.is-invalid]="submitted && f['message'].invalid"
+          ></textarea>
+          @if (submitted && f['message'].invalid) {
+            <span class="contact__error">Message should be at least 10 characters.</span>
+          }
+        </div>
+
+        <button type="submit" class="btn-app btn-app--primary">
+          Send Message <i class="bi bi-send"></i>
+        </button>
+
+        @if (formSentSuccessfully) {
+          <p class="contact__success">
+            <i class="bi bi-check-circle"></i> Thanks! Your message has been sent — I'll reply soon.
+          </p>
+        }
+      </form>
+    </div>
+  </div>
+</section>

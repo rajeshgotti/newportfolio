@@ -1,0 +1,40 @@
+<section id="skills" class="section section--alt skills" #skillsSection>
+  <div class="container-app">
+
+    <div class="skills__stats">
+      @for (stat of stats; track stat.label; let i = $index) {
+        <div class="stat-card" [appReveal]="'reveal-delay-' + ((i % 4) + 1)">
+          <i class="bi" [ngClass]="stat.icon"></i>
+          <h3>{{ animatedValues[i] }}{{ stat.suffix }}</h3>
+          <p>{{ stat.label }}</p>
+        </div>
+      }
+    </div>
+
+    <div class="section-heading" appReveal>
+      <p class="section-kicker">What I Know</p>
+      <h2 class="section-title">My Skills &amp; Toolset</h2>
+      <p class="section-desc">
+        A snapshot of the Angular ecosystem, front-end tools and backend fundamentals
+        I use every day &mdash; and the areas I&rsquo;m actively growing into.
+      </p>
+    </div>
+
+    <div class="skills__grid">
+      @for (skill of skills; track skill.name; let i = $index) {
+        <div class="skill-bar" [appReveal]="'reveal-delay-' + ((i % 4) + 1)">
+          <div class="skill-bar__head">
+            <span class="skill-bar__name">
+              <i class="bi" [ngClass]="skill.icon"></i>
+              {{ skill.name }}
+            </span>
+            <span class="skill-bar__value">{{ skill.level }}%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" [style.width.%]="skill.level"></div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<section id="testimonials" class="section section--alt testimonials">
+  <div class="container-app">
+    <div class="section-heading" appReveal>
+      <p class="section-kicker">Testimonials</p>
+      <h2 class="section-title">What Clients Say</h2>
+      <p class="section-desc">
+        A few words from people I've had the pleasure of building products with.
+      </p>
+    </div>
+
+    <div class="testimonial-slider" appReveal>
+      <button type="button" class="testimonial-slider__nav testimonial-slider__nav--prev" (click)="prev()" aria-label="Previous testimonial">
+        <i class="bi bi-arrow-left"></i>
+      </button>
+
+      <div class="testimonial-slider__track">
+        @for (t of testimonials; track t.name; let i = $index) {
+          @if (i === activeIndex) {
+            <div class="testimonial-card">
+              <i class="bi bi-quote testimonial-card__mark"></i>
+              <div class="testimonial-card__stars">
+                @for (star of [1,2,3,4,5]; track star) {
+                  <i class="bi" [ngClass]="star <= t.rating ? 'bi-star-fill' : 'bi-star'"></i>
+                }
+              </div>
+              <p class="testimonial-card__quote">&ldquo;{{ t.quote }}&rdquo;</p>
+              <div class="testimonial-card__author">
+                <img [src]="t.avatar" [alt]="t.name" loading="lazy" />
+                <div>
+                  <strong>{{ t.name }}</strong>
+                  <span>{{ t.role }}, {{ t.company }}</span>
+                </div>
+              </div>
+            </div>
+          }
+        }
+      </div>
+
+      <button type="button" class="testimonial-slider__nav testimonial-slider__nav--next" (click)="next()" aria-label="Next testimonial">
+        <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+
+    <div class="testimonial-dots">
+      @for (t of testimonials; track t.name; let i = $index) {
+        <button
+          type="button"
+          class="testimonial-dots__dot"
+          [class.is-active]="i === activeIndex"
+          (click)="select(i)"
+          [attr.aria-label]="'Show testimonial from ' + t.name"
+        ></button>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+<section id="home" class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="hero__blob hero__blob--1"></span>
+    <span class="hero__blob hero__blob--2"></span>
+    <div class="hero__grid"></div>
+    <div class="hero__particles">
+      @for (p of [1,2,3,4,5,6,7,8,9,10,11,12]; track p) {
+        <span class="hero__particle" [style.--i]="p"></span>
+      }
+    </div>
+  </div>
+
+  <div class="container-app hero__content">
+    <p class="hero__eyebrow reveal">
+      <span class="hero__eyebrow-badge">2+ Years</span>
+      Angular Developer &middot; Available for opportunities
+    </p>
+
+    <h1 class="hero__title reveal reveal-delay-1">
+      hi, i&rsquo;m <span class="hero__name">Rajesh Gottimukkula</span>
+    </h1>
+
+    <h2 class="hero__subtitle reveal reveal-delay-2">
+      I build <span class="hero__typed">{{ typedText }}<span class="hero__cursor">|</span></span>
+    </h2>
+
+    <p class="hero__desc reveal reveal-delay-3">
+      Angular Developer based in Hyderabad, India with 2+ years of experience building
+      healthcare / EMR web applications. I specialise in Angular, TypeScript, Reactive
+      Forms and REST API integration, and I&rsquo;m currently expanding into ASP.NET Core
+      Web API to grow into a full-stack developer.
+    </p>
+
+    <div class="hero__actions reveal reveal-delay-4">
+      <a href="#about" class="btn-app btn-app--primary">
+        More About Me <i class="bi bi-arrow-down-right"></i>
+      </a>
+      <a href="#contact" class="btn-app btn-app--outline">
+        Let&rsquo;s Work Together
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__side">
+    <ul class="hero__social">
+      @for (s of socials; track s.label) {
+        <li>
+          <a [href]="s.url" [attr.aria-label]="s.label" target="_blank" rel="noopener">
+            <i class="bi" [ngClass]="s.icon"></i>
+          </a>
+        </li>
+      }
+    </ul>
+    <span class="hero__side-line" aria-hidden="true"></span>
+  </div>
+
+  <div class="hero__contact-strip">
+    <span>Let&rsquo;s work together</span>
+    <a href="mailto:rajeshgottimukkula1996@gmail.com">rajeshgottimukkula1996&#64;gmail.com</a>
+    <a href="tel:+918185031050">+91 81850 31050</a>
+  </div>
+
+  <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+    <span></span>
+    scroll
+  </a>
+</section>

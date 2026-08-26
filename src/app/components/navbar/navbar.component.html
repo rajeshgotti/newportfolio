@@ -1,0 +1,68 @@
+<header class="topbar" [class.topbar--scrolled]="isScrolled">
+  <div class="topbar__inner container-app">
+    <a href="#home" class="topbar__logo" (click)="closeMenu()">
+      Rajesh<span>.</span>
+    </a>
+
+    <nav class="topbar__nav" aria-label="Primary">
+      <ul>
+        @for (link of links; track link.fragment) {
+          <li>
+            <a
+              [href]="'#' + link.fragment"
+              [class.is-active]="activeFragment === link.fragment"
+              (click)="closeMenu()"
+            >{{ link.label }}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <a href="#contact" class="topbar__cta btn-app btn-app--outline" (click)="closeMenu()">
+      Let's Talk
+    </a>
+
+    <button
+      type="button"
+      class="topbar__toggle"
+      [class.is-open]="isMenuOpen"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation menu"
+      aria-controls="mobile-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" [class.is-open]="isMenuOpen">
+  <nav aria-label="Mobile">
+    <ul>
+      @for (link of links; track link.fragment; let i = $index) {
+        <li [style.transition-delay.ms]="isMenuOpen ? i * 45 : 0">
+          <a
+            [href]="'#' + link.fragment"
+            [class.is-active]="activeFragment === link.fragment"
+            (click)="closeMenu()"
+          >
+            <i class="bi" [ngClass]="link.icon"></i>
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+  <ul class="mobile-menu__social">
+    <li><a href="https://www.linkedin.com/in/rajesh-gottimukkula" target="_blank" rel="noopener" aria-label="LinkedIn" (click)="closeMenu()"><i class="bi bi-linkedin"></i></a></li>
+    <li><a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" (click)="closeMenu()"><i class="bi bi-github"></i></a></li>
+    <li><a href="mailto:rajeshgottimukkula1996@gmail.com" aria-label="Email" (click)="closeMenu()"><i class="bi bi-envelope"></i></a></li>
+    <li><a href="tel:+918185031050" aria-label="Phone" (click)="closeMenu()"><i class="bi bi-telephone"></i></a></li>
+  </ul>
+</div>
+
+@if (isMenuOpen) {
+  <button type="button" class="mobile-menu__backdrop" (click)="closeMenu()" aria-label="Close menu"></button>
+}

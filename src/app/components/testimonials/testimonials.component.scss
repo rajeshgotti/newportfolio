@@ -1,0 +1,131 @@
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.testimonial-slider__nav {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+
+  &:hover {
+    background: var(--primary-color);
+    color: #16171d;
+    border-color: var(--primary-color);
+  }
+
+  @media (max-width: 575px) {
+    display: none;
+  }
+}
+
+.testimonial-slider__track {
+  flex: 1;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-card {
+  width: 100%;
+  text-align: center;
+  padding: 48px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  background: var(--background-color);
+  animation: testimonial-in 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  @media (max-width: 575px) {
+    padding: 32px 22px;
+  }
+
+  &__mark {
+    font-size: 34px;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    color: var(--primary-color);
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  &__quote {
+    font-size: 17px;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--primary-color);
+    }
+
+    div {
+      text-align: left;
+    }
+
+    strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 15px;
+    }
+
+    span {
+      font-size: 13px;
+      color: var(--muted-color);
+    }
+  }
+}
+
+@keyframes testimonial-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+
+  &__dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--border-color);
+    border: none;
+    transition: all var(--transition-fast);
+
+    &.is-active {
+      background: var(--primary-color);
+      width: 26px;
+      border-radius: 100px;
+    }
+  }
+}

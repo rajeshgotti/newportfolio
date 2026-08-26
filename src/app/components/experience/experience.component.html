@@ -1,0 +1,45 @@
+<section id="experience" class="section experience">
+  <div class="container-app">
+    <div class="section-heading" appReveal>
+      <p class="section-kicker">Resume</p>
+      <h2 class="section-title">Experience &amp; Education</h2>
+      <p class="section-desc">
+        2+ years of building production Angular applications in the healthcare
+        domain, alongside a science background and dedicated full-stack training.
+      </p>
+    </div>
+
+    <div class="experience__tabs" appReveal>
+      <button
+        type="button"
+        class="experience__tab"
+        [class.is-active]="activeTab === 'work'"
+        (click)="setTab('work')"
+      >
+        <i class="bi bi-briefcase"></i> Experience
+      </button>
+      <button
+        type="button"
+        class="experience__tab"
+        [class.is-active]="activeTab === 'education'"
+        (click)="setTab('education')"
+      >
+        <i class="bi bi-mortarboard"></i> Education
+      </button>
+    </div>
+
+    <ol class="timeline">
+      @for (item of filteredItems; track item.title; let i = $index) {
+        <li class="timeline__item" [appReveal]="'reveal-delay-' + ((i % 4) + 1)">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__period">{{ item.period }}</span>
+            <h3>{{ item.title }}</h3>
+            <span class="timeline__place">{{ item.place }}</span>
+            <p>{{ item.description }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
