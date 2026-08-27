@@ -22,7 +22,8 @@ export class ContactComponent {
   readonly contactInfo = [
     { icon: 'bi-telephone', label: 'Call Me', value: '+91 81850 31050', href: 'tel:+918185031050' },
     { icon: 'bi-envelope', label: 'Email Me', value: 'rajeshgottimukkula1996@gmail.com', href: 'mailto:rajeshgottimukkula1996@gmail.com' },
-    { icon: 'bi-geo-alt', label: 'Location', value: 'Hyderabad, Telangana — India', href: null }
+    { icon: 'bi-geo-alt', label: 'Location', value: 'Hyderabad, Telangana — India', href: null },
+    { icon: 'bi-check-circle', label: 'Availability', value: 'Immediate Joiner — Notice Period completed On 31st Aug 2026', href: null }
   ];
 
   readonly socials = [

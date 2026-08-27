@@ -27,7 +27,7 @@ export class PortfolioComponent {
         'Angular-based patient registration workflow for capturing demographics, insurance policies, nominee details, emergency contacts, authorisations and encounter information. Built dynamic Reactive Forms with cross-field validation and REST API integration for creating and managing patient records.',
       technologies: ['Angular 17', 'TypeScript', 'Reactive Forms', 'RxJS', 'REST API', 'Bootstrap'],
       client: 'Imperium Software — U.S. Healthcare Client',
-      duration: 'Oct 2024 — Present',
+      duration: 'Oct 2024 — Aug 2026',
       role: 'Angular Developer'
     },
     {
@@ -39,7 +39,7 @@ export class PortfolioComponent {
         'Developed and maintained Angular-based CPOE modules for managing clinical orders — medications, laboratory tests, procedures and other patient-care orders. Implemented role-based workflows, validations, autocomplete search and API integration used by physicians and nursing staff.',
       technologies: ['Angular 17', 'TypeScript', 'RxJS', 'Angular Material', 'REST API'],
       client: 'Imperium Software — U.S. Healthcare Client',
-      duration: 'Ongoing',
+      duration: 'Oct 2024 — Aug 2026',
       role: 'Angular Developer'
     },
     {
@@ -51,7 +51,7 @@ export class PortfolioComponent {
         'Implemented Medication Reconciliation workflows and Vitals capture screens for nurses. Built reusable Angular components, form validations, dynamic tables and integrated APIs to save clinical data in real time.',
       technologies: ['Angular', 'Reactive Forms', 'RxJS', 'REST API', 'SCSS'],
       client: 'Imperium Software — U.S. Healthcare Client',
-      duration: 'Ongoing',
+      duration: 'Oct 2024 — Aug 2026',
       role: 'Angular Developer'
     },
     {
@@ -63,7 +63,7 @@ export class PortfolioComponent {
         'Angular-based reporting modules for Patient, MAR, Laboratory, Radiology, Discharge and Audit reports. Implemented filtering, searching, pagination, data visualization and PDF report generation to support clinical and administrative workflows.',
       technologies: ['Angular', 'TypeScript', 'RxJS', 'HTML2PDF', 'REST API'],
       client: 'Imperium Software — U.S. Healthcare Client',
-      duration: 'Ongoing',
+      duration: 'Oct 2024 — Aug 2026',
       role: 'Angular Developer'
     },
     {
@@ -75,7 +75,7 @@ export class PortfolioComponent {
         'Worked on the Nursing Station dashboard and Patient Audit Log modules — real-time patient lists, task assignments, alerts and audit trails for every clinical action. Implemented performance-friendly grids, filters and role-based visibility.',
       technologies: ['Angular', 'RxJS', 'Angular Material', 'REST API'],
       client: 'Imperium Software — U.S. Healthcare Client',
-      duration: 'Ongoing',
+      duration: 'Oct 2024 — Aug 2026',
       role: 'Angular Developer'
     },
     {

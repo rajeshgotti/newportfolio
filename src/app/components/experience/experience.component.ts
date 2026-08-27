@@ -17,10 +17,10 @@ export class ExperienceComponent {
     {
       type: 'work',
       title: 'Angular Developer',
-      period: 'Oct 2024 — Present',
+      period: 'Oct 2024 — Aug 2026',
       place: 'Imperium Software Pvt. Ltd. — Hyderabad',
       description:
-        'Developing and maintaining a U.S.-based healthcare / EMR application used by physicians, nurses, pharmacists and HIM staff. Working across Patient Registration, CPOE, Medication Reconciliation, Vitals, Nursing Station and clinical Reports — building reusable Angular 17 components, Reactive Forms, RxJS-driven data flow and REST API integration. Actively collaborating with QA and backend teams for issue resolution.'
+        'Developed and maintained a U.S.-based healthcare / EMR application used by physicians, nurses, pharmacists and HIM staff. Worked across Patient Registration, CPOE, Medication Reconciliation, Vitals, Nursing Station and clinical Reports — building reusable Angular 17 components, Reactive Forms, RxJS-driven data flow and REST API integration. Collaborated closely with QA and backend teams for issue resolution. Notice period completed on 31st Aug 2025 — currently available and open to new opportunities.'
     },
     {
       type: 'education',
